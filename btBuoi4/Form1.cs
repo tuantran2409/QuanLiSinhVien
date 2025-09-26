@@ -83,12 +83,10 @@ namespace btBuoi4
                 if(txtStudentID.Text == "" || txtFullName.Text == "" || txtAverageScore.Text == "")
                 {
                     throw new Exception("Vui lòng nhập đầy đủ thông tin sinh viên!");
-                    return;
                 }
                 if(double.Parse(txtAverageScore.Text) < 0 || double.Parse(txtAverageScore.Text) > 10)
                 {
                     throw new Exception("Điểm trung bình phải từ 0 đến 10!");
-                    return;
                 }
                 
                 int selectedRow = GetSelectedRow(txtStudentID.Text);
